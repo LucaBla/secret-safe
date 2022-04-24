@@ -3,7 +3,8 @@ class SecretsController < ApplicationController
 
   # GET /secrets or /secrets.json
   def index
-    @secrets = Secret.all
+    @secrets = Secret.all.order('created_at DESC')
+    @secret = Secret.new
   end
 
   # GET /secrets/1 or /secrets/1.json
@@ -25,7 +26,7 @@ class SecretsController < ApplicationController
 
     respond_to do |format|
       if @secret.save
-        format.html { redirect_to secret_url(@secret), notice: "Secret was successfully created." }
+        format.html { redirect_to root_path, notice: "Secret was successfully created." }
         format.json { render :show, status: :created, location: @secret }
       else
         format.html { render :new, status: :unprocessable_entity }

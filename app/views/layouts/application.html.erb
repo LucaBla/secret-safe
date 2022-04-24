@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SecretSafe</title>
+    <title>Secret Safe</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,15 @@
   </head>
 
   <body>
+  <nav class='navbar'>
+    <div class='brand'>
+      <%= link_to image_tag("safe", alt: 'safe', class: 'navbar-logo'), root_path%> <h1><%= link_to 'Secret Safe', root_path %></h1>
+    </div>
+    <div class="account-buttons">
+      <%= button_to "Log In", method: "get" %> <%# Path Missing %>
+      <%= button_to "Sign In", method: "get" %> <%# Path Missing %>
+    </div>
+  </nav>
     <%= yield %>
   </body>
 </html>
