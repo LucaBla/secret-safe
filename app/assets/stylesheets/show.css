@@ -1,0 +1,16 @@
+.show-secret{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6vh;
+}
+
+.back-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-icon{
+  font-size: 30px;
+}

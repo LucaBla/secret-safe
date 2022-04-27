@@ -8,6 +8,7 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <script src="https://kit.fontawesome.com/5ed27ce724.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -20,6 +21,9 @@
       <%= button_to "Sign In", method: "get" %> <%# Path Missing %>
     </div>
   </nav>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
   </body>
 </html>

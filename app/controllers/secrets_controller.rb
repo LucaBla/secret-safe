@@ -22,6 +22,7 @@ class SecretsController < ApplicationController
 
   # POST /secrets or /secrets.json
   def create
+    @secrets = Secret.all.order('created_at DESC')
     @secret = Secret.new(secret_params)
 
     respond_to do |format|
@@ -29,7 +30,8 @@ class SecretsController < ApplicationController
         format.html { redirect_to root_path, notice: "Secret was successfully created." }
         format.json { render :show, status: :created, location: @secret }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        # flash[:alert]=@secret.errors
+        format.html { render 'index', status: :unprocessable_entity }
         format.json { render json: @secret.errors, status: :unprocessable_entity }
       end
     end
@@ -59,6 +61,7 @@ class SecretsController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_secret
       @secret = Secret.find(params[:id])
