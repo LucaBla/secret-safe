@@ -1,0 +1,21 @@
+
+  <%= link_to edit_user_registration_path, class: 'edit-profile-link' do %>
+    <div class="profile">
+      <h2>Profile</h2>
+      <div class="profile-infos">
+      <h3 class='profile-username'><%= current_user.username %></h3>
+      <div class='posted-secrets'>
+        <strong>Secrets:</strong>
+        <%= current_user.secrets.count %>
+      </div>
+      <div class="posted-comments">
+        <strong>Comments:</strong>
+        <%= current_user.comments.count %>
+      </div>
+      <div class="controversy-points">
+        <strong>controversy Points:</strong>
+        <%= current_user.controversy_points %>
+      </div>
+      </div>
+    </div>
+  <% end %>

@@ -16,14 +16,25 @@
     <div class='brand'>
       <%= link_to image_tag("safe", alt: 'safe', class: 'navbar-logo'), root_path%> <h1><%= link_to 'Secret Safe', root_path %></h1>
     </div>
-    <div class="account-buttons">
-      <%= button_to "Log In", method: "get" %> <%# Path Missing %>
-      <%= button_to "Sign In", method: "get" %> <%# Path Missing %>
-    </div>
+    <%if !user_signed_in? %>
+      <div class="account-buttons">
+        <%= button_to "Log In", new_user_session_url, method: "get" %>
+        <%= button_to "Sign In", new_user_registration_url, method: "get" %>
+      </div>
+    <% else %>
+      <div class="account-buttons">
+        <%= button_to "Log Out", destroy_user_session_url, method: "delete" %>
+      </div>
+    <% end %>
   </nav>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <%= yield %>
+  <% if alert || notice %>
+    <div class="alerts-and-notices">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+  <% end %>
+    <div class="content">
+      <%= yield %>
+    </div>
   </body>
 </html>

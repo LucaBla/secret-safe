@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+  resources :comments
+  devise_for :users, :controllers => { registrations: 'registrations' }
   root 'secrets#index'
 
   resources :secrets, only: [:index, :show, :new, :create]

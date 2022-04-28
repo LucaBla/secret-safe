@@ -1,5 +1,6 @@
 class SecretsController < ApplicationController
   before_action :set_secret, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: [:index]
 
   # GET /secrets or /secrets.json
   def index
@@ -9,11 +10,12 @@ class SecretsController < ApplicationController
 
   # GET /secrets/1 or /secrets/1.json
   def show
+    @comment = @secret.comments.build
   end
 
   # GET /secrets/new
   def new
-    @secret = Secret.new
+    @secret = current_user.secrets.build
   end
 
   # GET /secrets/1/edit
@@ -23,7 +25,7 @@ class SecretsController < ApplicationController
   # POST /secrets or /secrets.json
   def create
     @secrets = Secret.all.order('created_at DESC')
-    @secret = Secret.new(secret_params)
+    @secret = current_user.secrets.build(secret_params)
 
     respond_to do |format|
       if @secret.save
