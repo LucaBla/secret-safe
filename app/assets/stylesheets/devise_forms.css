@@ -1,0 +1,144 @@
+.devise label{
+  font-weight: bold;
+}
+
+.devise input:not([type="submit"]){
+  border: 0px solid black;
+  background-color: transparent;
+  width: 96%;
+  height: 15px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  border-bottom: 1px solid #264653;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.devise input:hover:not([type="submit"]){
+  border: 0px solid black;
+  border-bottom: 1px solid #264653;
+}
+
+.devise input:focus:not([type="submit"]){
+  border: 0px solid black;
+  outline: 0px;
+  border-bottom: 1px solid #264653;
+}
+
+.devise input[type=submit]{
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: #E76F51;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.devise input[type=submit]:hover{
+  background-color: #E9C46A;
+  transition: 0.1s;
+}
+
+.devise button{
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: #E76F51;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.devise button:hover{
+  background-color: #E9C46A;
+  transition: 0.1s;
+}
+
+.devise h2{
+  align-self: flex-start;
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+.devise form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2A9D8F;
+  padding: 20px 20px;
+  border-radius: 8px;
+  width: 75%;
+  margin-bottom: 50px;
+  font-size: 18px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.308);
+  padding-top: 30px;
+  word-break: break-word;
+}
+
+.devise i{
+  font-size: 16px;
+}
+
+i.close-icon{
+  font-size: 30px;
+}
+
+.devise .field{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+  margin-bottom: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 10px;
+  border-radius: 8px;
+  width: 90%;
+}
+
+.edit-user-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.password-hint{
+  margin-top: -10px;
+  font-size: 16px;
+}
+
+.back-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.devise.cancel-account{
+  display: flex;
+  flex-direction: column;
+  margin-top: -2px;
+  text-align: left;
+}
+
+.devise.cancel-account h2{
+  margin-top: 50px;
+  margin-bottom: -18px;
+}
+
+.devise.cancel-account form{
+  align-self: flex-end;
+  margin-right: 50px;
+}
+
+

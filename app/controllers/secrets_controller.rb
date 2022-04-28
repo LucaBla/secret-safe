@@ -10,7 +10,7 @@ class SecretsController < ApplicationController
 
   # GET /secrets/1 or /secrets/1.json
   def show
-    @comment = @secret.comments.build
+    @comment = Comment.new(secret: @secret, user: current_user)
   end
 
   # GET /secrets/new

@@ -6,8 +6,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :secrets
-  has_many :comments
+  has_many :secrets, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   def controversy_points
     all_comments = 0
