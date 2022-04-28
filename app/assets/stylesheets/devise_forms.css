@@ -63,7 +63,7 @@
 .devise h2{
   align-self: flex-start;
   margin-left: 10%;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .devise form{
@@ -131,7 +131,7 @@ i.close-icon{
 .devise.cancel-account{
   display: flex;
   flex-direction: column;
-  margin-top: -2px;
+  margin-top: 15px;
   text-align: left;
 }
 
