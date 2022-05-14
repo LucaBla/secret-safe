@@ -13,4 +13,7 @@ E-Mail: guest@guest.com <br/>
 Password: 123456
 
 ## Screenshots
+<img src="preview_imgs/sec_saf1.png">
+<img src="preview_imgs/sec_saf2.png">
+<img src="preview_imgs/sec_saf3.png">
 
