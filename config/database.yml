@@ -14,6 +14,7 @@ development:
   <<: *default
  # database: db/development.sqlite3
   database: secret_safe_development
+  schema_search_path: secret_safe, public
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -27,3 +28,4 @@ production:
   <<: *default
   #database: db/production.sqlite3
   database: secret_safe_production
+  schema_search_path: secret_safe, public
